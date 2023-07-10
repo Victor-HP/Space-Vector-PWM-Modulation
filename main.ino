@@ -80,8 +80,9 @@ void clockwise(int freq)
 
     for (int i3 = 0, i4= 19; i3 < 20; i3++, i4--)
     {
-      time1 = ((time * angc[i3]));
-      time2 = ((time * angc[i3]));
+      float vet1 = i3/10, vet2 = (19 - i3)/10;
+      time1 = ((time * angc[i3])*vet1);
+      time2 = ((time * angc[i3])*vet2);
 
       digitalWrite(keys[setkeys[i][0]], LOW);
       digitalWrite(keys[setkeys[i][1]], LOW);
