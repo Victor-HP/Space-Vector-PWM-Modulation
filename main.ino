@@ -80,9 +80,8 @@ void clockwise(int freq)
 
     for (int i3 = 0, i4= 19; i3 < 20; i3++, i4--)
     {
-      float vet1 = i3/10, vet2 = (19 - i3)/10;
-      time1 = ((time * angc[i3])*vet1);
-      time2 = ((time * angc[i3])*vet2);
+      time1 = ((time * angc[i3]));
+      time2 = ((time * angc[i3]));
 
       digitalWrite(keys[setkeys[i][0]], LOW);
       digitalWrite(keys[setkeys[i][1]], LOW);
@@ -99,7 +98,7 @@ void clockwise(int freq)
       digitalWrite(keys[setkeys[i2][3]], HIGH);
       digitalWrite(keys[setkeys[i2][4]], HIGH);
       digitalWrite(keys[setkeys[i2][5]], HIGH);
-      delayMicroseconds(time1);
+      delayMicroseconds(time2);
     }
   }
 }
